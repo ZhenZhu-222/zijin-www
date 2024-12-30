@@ -103,6 +103,27 @@
             position: relative;
             z-index: 1;
         }
+        /* 聊天插件容器 */
+        .chat-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .chat-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 90%;
+            max-width: 400px;
+            height: 70%;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
@@ -129,18 +150,13 @@
     </iframe>
 
     <div class="footer">© 2025 浪漫相遇 | 让爱从这里开始</div>
-<script type="text/javascript">
-  (function(d, t) {
-      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-      v.onload = function() {
-        window.voiceflow.chat.load({
-          verify: { projectID: '67626ec66132603bff4421b3' },
-          url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production'
-        });
-      }
-      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-  })(document, 'script');
-</script>
+
+    <div class="chat-title">我在这里</div>
+    <div class="chat-container">
+        <iframe 
+            src="https://general-runtime.voiceflow.com/embed?verify.projectID=67626ec66132603bff4421b3&versionID=production"
+            style="width: 100%; height: 100%; border: none;">
+        </iframe>
+    </div>
 </body>
 </html>
